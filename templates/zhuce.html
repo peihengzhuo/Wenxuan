@@ -1,0 +1,314 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+		<style>
+			#header-wrapper{background: url({% static 'images/loginbg.png' %}) repeat-x 0 -349px;height: 82px;}
+			.header{height: 82px;}
+			.header a{display: block;background: url({% static 'images/loginbg.png' %}) no-repeat 0 -217px;width: 208px;height: 82px;float: left;}
+						body {
+				
+				font-size: 13px;
+				color: #666;
+				font-family: "微软雅黑";
+			}
+			
+			form {
+				width: 400px;
+				height: 600px;
+				margin: 10px auto;
+				padding: 20px;
+				margin-top: 30px;
+			}
+			
+			.title {
+				font-size: 20px;
+				color: #A61717;
+			}
+			
+			tr {
+				height: 40px;
+				width: 200px;
+			}
+			
+			.col1 {
+				width: 120px;
+				padding-left: 30px;
+			}
+			
+			input {
+				width: 200px;
+				height: 30px;
+				border-radius: 3px;
+				border: 1px solid #669CFF;
+				padding-left: 5px;
+				color: #666;
+			}
+			
+			#level span {
+				float: left;
+				width: 60px;
+				height: 26px;
+				border-right: 1px solid #ddd;
+				background: white;
+				text-align: center;
+				line-height: 26px;
+			}
+			
+			#level .default {
+				background: gray;
+			}
+			
+			.codes {
+				width: 80px;
+			}
+			
+			.regtd {
+				height: 60px;
+				padding-top: 10px;
+			}
+			
+			#reg {
+				background: #EC6C00;
+				border: 1px solid black;
+				height: 40px;
+				width: 160px;
+				color: white;
+				font-size: 22px;
+				margin-left: 100px;
+			}
+			
+			#checkbox {
+				margin-left: 100px;
+				width: 15px;
+				height: 15px;
+			}
+			
+			#toast {
+				margin: 0 auto;
+				width: 300px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				background: #00B5AD;
+				border: 1px solid #999;
+				border-radius: 6px;
+				margin-top: 20px;
+				color: #fff;
+			}
+		</style>
+		<script src="{% static 'js/cookie.js' %}"></script>
+{#        <script src="{% static 'js/test.js' %}"></script>#}
+		<script>
+			onload = function() {
+				
+				
+				
+				var atost = document.getElementById("toast");
+				var aIput = document.getElementsByTagName("input")
+				
+				//获取上次cookie
+				var user = getCookie("user");
+				var pwd = getCookie("pwd");
+				aIput[0].value = user;
+				aIput[1].value = pwd;
+				
+				var flag1 = false;
+				var flag2 = false;
+				var flag3 = false;
+				var flag4 = false;
+				var flag5 = false;
+				var flag6 = false;
+				//用户名
+				aIput[0].onkeyup = function(){
+					if(/^[a-zA-Z_]\w{7,}$/.test(this.value)){
+						atost.innerHTML = "用户名合法"
+						flag1 = true;
+					}
+					else{
+						atost.innerHTML = "用户名不合法"
+						flag1 = false;
+					}
+					
+				}
+				
+				//密码
+				var olever = document.getElementById("level")
+				//var aSpan = olever.getElementsByTagName("span")
+				 
+				aIput[1].onkeyup = function(){
+					
+					var value = this.value;
+					
+					if(/^.{6,20}$/.test(value)){
+						atost.innerHTML = "密码合法"
+						flag2 = true;
+			
+					}
+					else{
+							atost.innerHTML = "密码不合法"
+							flag2 = false;
+						
+					}
+				}
+				 
+				//重复密码
+				aIput[2].onkeyup = function(){
+					
+					var value = this.value;
+					
+					if(value == aIput[1].value){
+						atost.innerHTML = "密码输入一致"
+						flag3 = true;
+						
+					}
+					else{
+						atost.innerHTML = "密码输入不一致，请重新输入"
+						flag3 = false;
+					}
+				}
+				
+				
+				//身份证
+				
+			
+				
+				//手机
+				
+				aIput[3].onkeyup = function(){
+					
+					var value = this.value;
+					
+					if(/^((13[0-9])|(14[5|7])(15([0-3]|[5-9]))|(18[05-9]))\d{8}$/.test(value)){
+						atost.innerHTML = "手机号输入合法"
+						flag4 = true;
+					}
+					else{
+						atost.innerHTML = "手机号输入不合法"
+						flag4 = false;
+						
+					}
+				}
+				
+				//验证码输入框
+				aIput[4].onkeyup = function(){
+					
+					fn();
+				}
+				//验证码
+				aIput[5].onclick = function(){
+					var str = ""
+					for(var i =0;i<4;i++){
+					var b = Math.random();	
+					if(b>0 && b<=0.3){
+						str += parseInt( Math.random()*10 )
+					}
+					else if(b<=0.6){
+						str += String.fromCharCode(parseInt( Math.random()*26)+65)
+					}
+					else{
+						str += String.fromCharCode(parseInt(Math.random()*26 )+97 )
+					}
+				}
+					this.value = str
+					
+					fn();
+				}
+				 //验证码是否一致
+				function fn(){
+					
+					if(aIput[4].value == aIput[5].value){
+						
+						atost.innerHTML = "验证码输入正确"
+						flag5 = true;
+					}
+					else{
+						atost.innerHTML = "验证码输入有误"
+						flag5 = false;
+					}
+				}
+				
+				
+				//注册
+				
+				aIput[7].onclick = function(){
+					
+					if( flag1 && flag2 && flag3 && flag4 && flag5  ){
+						
+						if( aIput[6].checked ){
+							
+							var d = new Date()
+							d.setDate(d.getDate()+10 );
+							setCookie( "user",aIput[0].value ,d)
+							setCookie( "pwd",aIput[1].value ,d)
+							
+						}
+						alert("注册成功")
+						location.href = "/denglu/"
+					}
+					else{
+						atost.innerHTML = "输入有误请检查"
+						
+					}
+					
+					
+				}
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="header-wrapper">
+			<div class="header inr">
+				<a href="/#"></a>
+			</div>
+		</div>
+		<form>
+			<table id="tb">
+				
+				<tr>
+					<td class="col1">用户名称</td>
+					<td><input type="text" placeholder="请输入用户名"></td>
+				</tr>
+				<tr>
+					<td class="col1">登录密码</td>
+					<td><input type="password" placeholder="请输入密码"></td>
+				</tr>
+				
+				<tr>
+					<td class="col1">重复登录密码</td>
+					<td><input type="password" placeholder="重复登录密码"></td>
+				</tr>
+				
+				
+
+				
+				<tr>
+					<td class="col1">手机</td>
+					<td><input type="text" placeholder="输入手机号"></td>
+				</tr>
+				<tr>
+					<td class="col1">验证码</td>
+					<td>
+						<input class="codes" type="text" placeholder="输入验证码">
+						<input type="button" style="width: 80px; background: white; font-size: 20px; margin-left: 10px; color: black;" value="edA5" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="regtd">
+						<input id="checkbox" type="checkbox" />10天内免登录 <br /><br />
+						<input id="reg" type="button" value="注册" />
+					</td>
+				</tr>
+			</table>
+			<div id="toast">提示文字</div>
+		</form>
+		
+		
+	</body>
+</html>

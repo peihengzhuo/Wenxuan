@@ -1,0 +1,55 @@
+
+#logo-wrap{width: 100%;height: 100px;}
+.top{height: 100px;}
+.logo{float: left;width: 188px;height: 46px;}
+.top b{float: right;display: block;    width: 240px;
+    color: #7e7e7e;
+    font-size: 1.5em;
+    line-height: 46px}
+.logo a{display: block;width: 188px;height: 46px;float: left;}
+.proges{margin: 10px 0;background: #ccc url(../images/bread-buy.jpg) no-repeat 0 0;height: 33px;float: left;width: 990px;}
+.thead{height: 36px;border-bottom: 1px solid #ddd;clear: both;background: #f3f3f3;}
+.thead .checkbox,.product,.price,.credits,.privilege,.quantity,.operation{height: 36px;float: left;line-height: 36px;text-align: center;color: #666;width: 95px;border-right: 1px solid #fff;}
+.thead .product{width: 340px;}
+.thead .price{width: 105px;}
+.thead .credits{width: 95px;}
+.thead .privilege,.thead .quantity{width: 120px;}
+.thead .operation{width: 100px;border-right:none ;}
+.grop .shop-top{color: #666;background: #f9f9f9;border-bottom: 1px dashed  #ddd;height: 33px;width: 990px;line-height: 30px;}
+.shop-top span{margin-left: 30px;}
+.proms{line-height: 30px;background: #E5FDE5 ;border: 1px solid #ddd;}
+.proms span{background:url(../images/icons.png) no-repeat 3px -26px;height: 30px;width: 36px;display: block;float: left;}
+.proms h3{font-size: 12px;margin-left: 50px;}
+
+/*增添商品*/
+#list{width: 988px;height: 65px;border: 1px solid #ddd;border-top:none ;}
+#list li{float: left;height: 65px;width: 988px;color: #333;text-align: center;position: relative;line-height: 65px;border: 1px solid #ddd;}
+#list li img{width: 55px;height: 55px;margin: 5px;float: left;}
+#list li span{float: left;margin: 0 10px;}
+#deleteSelect{color: #005AA0;}
+#list li span:nth-of-type(1){display: block;width:234px ;height: 65px;overflow: hidden;}
+
+#list li span:nth-of-type(2){margin-left: 40px;color: #B20202;font-size: 14px;}
+#list li .sub{margin-left: 170px;border: 0;background: #fff;border: 1px solid #B20202;margin-right: 5px;cursor: pointer;}
+#list li .sum{width: 40px;display: block;height: 30px;border: 0;}
+#list li .add{border: 0;background: #fff;border: 1px solid #B20202;margin-left: 5px;cursor: pointer;}
+ .delete{margin-left: 100px;color: #0057B0;}
+ .main p{color: #B20202;font-size: 18px;}
+.check{float: left;}
+.num{width: 25px;border: 1px solid #B20202;text-align: center;}
+/*#list.product{width: 400px;text-align: left;}
+#list .price{width: 106px;}
+#list .credits{width: 96px;}
+#list .privilege{width: 121px;}
+#list .quantity{width: 121px;}
+#list.quantity {margin-top:20px ;}
+#list .quantity .cl-box{width: 40px;text-align: center;border: 1px solid #ddd;border-radius: 2px;height: 20px;float: left;margin:  0 2px;}
+#list .quantity a{width: 18px;height: 13px;display: block;float: left;margin-top: 5px;}
+#list .quantity .red-btn{background: url(../images/icons.png) no-repeat 0 0;}
+#list .quantity .add-btn{background: url(../images/icons.png) no-repeat -23px 0;}
+#list .operation{width: 100px;}*/
+
+/*tfoot*/
+
+.gou .continue{width: 142px;height: 45px;background: url(../images/balance-button.jpg) no-repeat 0 -4px;display: block;position: absolute;left: 200px;}
+.balance{width: 208px;height: 45px;background: url(../images/balance-button.jpg) no-repeat -142px -4px;display: block;float: right;position: absolute;right: 200px;}

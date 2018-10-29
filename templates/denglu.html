@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+		<style>
+			#box{width: 260px;height: 260px;border: 2px dotted #ddd;background: #fff;position: absolute;left: 50%;margin-left: -150px;top: 50%;margin-top: -150px;padding: 20px;}
+			.top{width: 260px;height: 30px;text-align: right;line-height: 30px;font-size: 15px;color: #666;font-weight: bold;}
+			.top img{width: 100px;float: left;}
+			input{margin: 10px auto;}
+			#btn{width: 80px;height: 30px;background: #F27F02;border-radius:5px ;color: #fff;border: 1px solid #F27F02;}
+			form{display: block;width: 260px;height: 200px;margin-top: 20px;}
+		</style>
+		<script src="{% static 'js/cookie.js' %}"></script>
+{#        <script src="{% static 'js/test.js' %}"></script>#}
+		<script>
+			onload = function(){
+				var otet = document.getElementById("tet");
+				var opas = document.getElementById("pas");
+				var obtn = document.getElementById("btn");
+				
+					var user = getCookie("user");
+					var pwd = getCookie("pwd")
+//					otet.value = user;
+//					opas.value = pwd;
+//				    console.log(user,pwd)
+				obtn.onclick = function(){
+					
+					
+					if(otet.value == user && opas.value == pwd ){
+						console.log(otet.value)
+						  alert("登录成功")
+						location.href = "/#"
+						 //console.log(5)
+					}
+//					else if(otet.value == null &&  opas.value == null  ) {
+//						alert("请输入用户名和密码")
+//						//console.log(5)
+//					}
+					 else{
+					 	alert("登录成功")
+					 	location.href = "/#"
+					 }
+				}  
+				
+				 
+				  
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="top">
+				<a href="/#"><img src="{% static 'images/logo (1).png' %}"/></a>
+				
+				登录
+			
+			</div>
+		<form>
+			用户名：<input type="text" id="tet" placeholder="请输入用户名"/><br />
+			密&nbsp;码：<input type="password"id="pas" placeholder="请输入密码"/><br />
+			登&nbsp;录：<input type="button"id="btn"value="登录"><a href="/zhuce/" style="margin-left: 30px;display: inline-block;width: 80px;height: 30px;background: #09BEE3;color: #fff;line-height: 30px;text-align: center;border-radius: 5px;">免费注册</a>
+		</form>
+		</div>
+	</body>
+</html>

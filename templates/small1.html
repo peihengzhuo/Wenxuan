@@ -1,0 +1,459 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href=" {% static 'css/common.css' %}"/>
+		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/xiangqing.js' %}"></script>
+		<script src="{% static 'js/jquery.cookie.js' %}"></script>
+		<script src="{% static 'js/small.js' %}"></script>
+{#		<script src="{% static 'js/test.js' %}"></script>#}
+	</head>
+	<body>
+
+			<div id="header-wrapper">
+			<div class="header inner">
+				<div class="he_l">
+					<span></span>
+					<a href="#">收藏文轩网</a>
+				</div>
+				<ul class="he-r">
+					<li>
+						<span>您好，欢迎光临文轩网！</span>
+					</li>
+					<li class="login">
+						<a href="#" target="_blank" class="col">【登录】</a>
+						<a href="#" target="_blank" class="col">【免费注册】</a>
+					</li>
+					<li class="list1">
+						<a href="#" target="_blank">我的订单</a>
+
+					</li>
+					<li class="list2">
+						<a href="#" target="_blank">礼品卡</a>
+					</li>
+					<li class="list3">
+						<a href="#" target="_blank">新手上门</a>
+						<i></i>
+						<div class="mune1">
+							<ul class="tip1">
+								<li><a href="#" target="_blank">购物保障</a></li>
+								<li><a href="#" target="_blank">购物流程</a></li>
+								<li><a href="#" target="_blank">常见问题</a></li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="list4">
+						<a href="#" target="_blank">帮助中心</a>
+						<i></i>
+						<div class="mune2">
+							<ul class="tip2">
+								<li><a href="#" target="_blank">配送方式</a></li>
+								<li><a href="#" target="_blank">货到付款</a></li>
+								<li><a href="#" target="_blank">售后服务</a></li>
+								<li><a href="#" target="_blank">订单状态</a></li>
+								<li><a href="#" target="_blank">发票制度</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="list5">
+						<a href="#" target="_blank">客户服务</a>
+						<i></i>
+						<div class="mune3">
+							<ul class="tip3">
+								<li><a href="#" target="_blank">客服中心</a></li>
+								<li><a href="#" target="_blank">售后服务</a></li>
+
+							</ul>
+						</div>
+					</li>
+					<li class="list6">
+						<b></b>
+						<a href="#" target="_blank">手机文轩</a>
+						<i></i>
+
+						<div class="mune4">
+							<div class="ipone">
+								<img src="{% static 'images/m143.jpg' %}">
+								<a href="#" target="_blank"><span>扫一扫 文轩手机购物&gt;</span></a>
+							</div>
+							<div class="code">
+								<img src="{% static 'images/code2.png' %}">
+								<a href="#" target="_blank"><span>电子书 客户端&gt;</span></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--
+        	top end
+        -->
+		<div id="pic">
+			<a href="#" title="乐享暑假">
+
+			</a>
+		</div>
+
+		<!--
+        	pic end
+        -->
+
+		<div id="search-wrapper">
+			<div class="search inner">
+				<div class="logo">
+					<a href="#">
+						<img src="{% static 'images/logo.png' %}">
+					</a>
+				</div>
+				<div class="ediot">
+					<form method="" action="" name="">
+						<input placeholder="未来简史" class="tet" type="text">
+						<input value="搜索" class="sub" type="submit">
+						<a href="#" target="_blank">高级搜索</a>
+					</form>
+					<div class="keyword">
+						<span>热门搜索:</span>
+						<a href="#" target="_blank">今日秒杀<img src="{% static 'images/hot-045.gif' %}"></a>
+						<a href="#" target="_blank">5折封顶<img src="{% static 'images/hot-045.gif' %}"></a>
+						<a href="#" target="_blank">满59减15<img src="{% static 'images/hot-045.gif' %}"></a>
+						<a href="#" target="_blank">双峰<img src="{% static 'images/hot-045.gif' %}"></a>
+						<a href="#" target="_blank">收藏家<img src="{% static 'images/hot-045.gif' %}"></a>
+						<a href="#" target="_blank">美国众神<img src="{% static 'images/hot-045.gif' %}"></a>
+					</div>
+				</div>
+				<div class="buycar">
+					<!--
+                    	这里要用js
+                    -->
+					<div class="myself">
+						<b></b>
+						<a href="#" target="_blank">我的文轩</a>
+						<i></i>
+					</div>
+					<div class="b_car">
+						<b></b>
+						<span id="did">0</span>
+						<a href="#" target="_blank">购物车</a>
+						<i></i>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!--search结束 -->
+
+		<!--nav -->
+		<div id="nav-wrapper">
+			<div class="nav inner">
+				<div class="title">全部商品分类</div>
+				<ul>
+					<li><a href="#" target="_blank">首页</a></li>
+					<li><a href="#" target="_blank">文学频道</a></li>
+					<li><a href="#" target="_blank">社区频道</a></li>
+					<li><a href="#" target="_blank">经管频道</a></li>
+					<li><a href="#" target="_blank">少儿频道</a></li>
+					<li><a href="#" target="_blank">生活频道</a></li>
+					<li><a href="#" target="_blank">文教频道</a></li>
+					<li><a href="#" target="_blank">音像</a></li>
+					<li><a href="#" target="_blank">百货</a></li>
+					<li><a href="#" target="_blank">电子书</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="bookshop-warpper">
+			<div class="book-shop inner">
+				<div class="bk-top">
+					<a href="#" target="_blank" style="font-size: 18px;font-family: 'microsoft yahei';font-weight: 700;line-height: 20px;">图书</a>&gt;
+					<a href="#" target="_blank">励志与成功</a>&gt;
+					<a href="#" target="_blank">成功学</a>
+				</div>
+				<div class="shop-left">
+					<div class="hot-itle">
+						<h3>该作者的其他商品</h3>
+					</div>
+					<ul class="bbk">
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl1.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+							</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl2.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+							</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl3.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+							</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl4.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+							</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl5.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+									</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<img src="{% static 'images/tl6.jpg' %}">
+								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
+								</a>
+								<div class="pires">
+									文轩价：<span>¥27.30</span>
+								</div>
+
+						</li>
+					</ul>
+					<div class="more-bk">
+						<a href="#" target="_blank">更多&gt;&gt;</a>
+					</div>
+				</div>
+				<!-- 购物车-->
+				<div class="bk-by">
+					<div class="small-img">
+						<div id="smallImg">
+							<img src="{% static 'images/small1.jpg' %}">
+							<div id="smallArea" style="width: 233.333px; height: 233.333px; display: none; left: 0px; top: 2.5px;"></div>
+						</div>
+
+						<div class="sml_coin">
+							<span>分享到：</span>
+							<a href="#" target="_blank">
+								<i></i>
+							</a>
+							<a href="#" target="_blank">
+								<i></i>
+							</a>
+							<a href="#" target="_blank">
+								<i></i>
+							</a>
+							<a href="#" target="_blank">
+								<i></i>
+							</a>
+							<b>7</b>
+							<a href="#" target="_blank">
+								<em></em>
+							</a>
+						</div>
+					</div>
+
+					<!--右边 -->
+
+					<div class="rig-tilk">
+						<div id="bigArea" style="display: none;">
+							<img src="{% static 'images/big1.jpg' %}" id="bigImg" style="left: 0px; top: -4.28571px;">
+						</div>
+						<div class="rit_title">
+							<h1>谁的青春不迷茫</h1>
+							<h3>中国当代都市青春文学，成长励志自我实现，人际交往书，正能量心理学书，新华书店正版畅销图书</h3>
+						</div>
+						<div class="fenlei">
+							<div class="pie-o">
+								<span>定　　价 ：</span>
+								<b class="pju">¥35.00</b>
+							</div>
+							<div class="wxjia">
+								<span>文 轩 价 ：</span>
+								<em class="price">¥22.80</em>
+								<i>（6.5折）</i>
+								<a href="#" target="_blank">（降价通知）</a>
+							</div>
+							<div class="peisong">
+								<span>配 送 至 ：</span>
+								<b>中国四川省成都市<i></i></b>
+								<em>现在有货</em>
+							</div>
+							<div class="psxq">
+								<span>文轩网<b>正版图书音像</b>，为您快捷发货</span>
+								<a href="#" target="_blank">（配送详情）</a>
+							</div>
+							<div class="aticle">
+								<span>作　　者 ：</span>
+								<a href="#" target="_blank">刘同</a>&nbsp;著
+							</div>
+							<div class="fenk">
+								<span>所属分类 ：</span>
+								<a href="#" target="_blank">图书</a>&gt;
+								<a href="#" target="_blank">励志与成功</a>&gt;
+								<a href="#" target="_blank">成功学</a>
+							</div>
+						</div>
+						<!-- 购买数量-->
+						<div class="buymore">
+							<div class="much">
+								<span>购买数量 ：</span>
+								<b class="much-more">
+									<a class="reduce-btn">-</a>
+									<input value="1" class="buy-much" type="text">
+									<a class="add-btn">+</a>
+								</b>件
+							</div>
+
+								<div id="cart">
+									<a target="_blank" style="cursor: pointer;" href="gouwuche/"></a>
+								</div>
+
+
+							<div class="buy-servce">
+								<div class="service1">
+								<span>服　　务 ：</span>
+								<b>由"文轩网"直接销售和发货，并提供售后服务</b>
+								</div>
+								<div class="fahuo">
+									<a href="#" target="_blank">正品低价</a>|
+									<a href="#" target="_blank">闪电发货</a>|
+									<a href="#" target="_blank">货到付款</a>|
+									<a href="#" target="_blank">高效退换货</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--购物显示界面 -->
+					<div class="suc-wrp">
+						<div class="suc">
+							<div class="suc-title">
+								<em>提示</em>
+								<b class="guanbi">X</b>
+							</div>
+							<div class="suc-content">
+								<div class="cg">商品已成功添加到购物车！</div>
+								<p>购物车共有<b class="jisuan">2</b>件商品，合计：<b class="jisuan2">￥52.50</b></p>
+							</div>
+							<div class="suc-btn">
+								<button id="cart" style="border-radius:5px ;"><a href="gouwuche/" target="_blank" class="addToCart">去购物车并结算 </a> </button>
+								<button class="buy-min">继续购物&gt;</button>
+
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+			<!--
+            	尾部
+            -->
+            <div id="foot-wrapper">
+			<div class="foot inner">
+				<div class="foot-one">
+					<ul class="service">
+						<li class="service-list">
+							<dt>新手入门</dt>
+							<dd><a href="#" target="_blank">购物保障</a></dd>
+							<dd><a href="#" target="_blank">购物流程</a></dd>
+							<dd><a href="#" target="_blank">常见问题</a></dd>
+							<dd><a href="#" target="_blank">联系客服</a></dd>
+						</li>
+						<li class="service-list">
+							<dt>配送服务</dt>
+							<dd><a href="#" target="_blank">货到付款区域查询</a></dd>
+							<dd><a href="#" target="_blank">配送范围和时间</a></dd>
+							<dd><a href="#" target="_blank">配送收费标准</a></dd>
+							<dd><a href="#" target="_blank">快递查询入口</a></dd>
+							<dd><a href="#" target="_blank">验货与签收</a></dd>
+						</li>
+						<li class="service-list">
+							<dt>支付方式</dt>
+							<dd><a href="#" target="_blank">货到付款</a></dd>
+							<dd><a href="#" target="_blank">在线支付</a></dd>
+							<dd><a href="#" target="_blank">银行转账/汇款</a></dd>
+							<dd><a href="#" target="_blank">其他支付方式</a></dd>
+							<dd><a href="#" target="_blank">交易安全防诈骗</a></dd>
+						</li>
+						<li class="service-list">
+							<dt>售后服务</dt>
+							<dd><a href="#" target="_blank">退换货规则</a></dd>
+							<dd><a href="#" target="_blank">如何申请售后服务</a></dd>
+							<dd><a href="#" target="_blank">退款及提现</a></dd>
+
+						</li>
+						<li class="service-list">
+							<dt>我的订单</dt>
+							<dd><a href="#" target="_blank">下单演示</a></dd>
+							<dd><a href="#" target="_blank">订单状态/查询</a></dd>
+							<dd><a href="#" target="_blank">订单取消</a></dd>
+							<dd><a href="#" target="_blank">发票制度</a></dd>
+							<dd><a href="#" target="_blank">积分规则</a></dd>
+						</li>
+						<li class="service-list">
+							<dt>文轩服务</dt>
+							<dd><a href="#" target="_blank">礼券（优惠券）</a></dd>
+							<dd><a href="#" target="_blank">文轩礼品卡</a></dd>
+							<dd><a href="#" target="_blank">文轩好书推荐</a></dd>
+							<dd><a href="#" target="_blank">交易条款</a></dd>
+						</li>
+						<li class="service-list">
+							<dt>电子书阅读器</dt>
+							<dd><a href="#" target="_blank">Android</a></dd>
+							<dd><a href="#" target="_blank">iPad</a></dd>
+							<dd><a href="#" target="_blank">iPhone</a></dd>
+							<dd><a href="#" target="_blank">PC阅读器</a></dd>
+						</li>
+					</ul>
+				</div>
+				<div class="foot-two">
+
+				</div>
+				<div class="foot-thr">
+					<div class="foot-nav">
+						<a href="#" target="_blank">关于我们</a> |
+						<a href="#" target="_blank">联系文轩</a> |
+						<a href="#" target="_blank">加入文轩</a> |
+						<a href="#" target="_blank">合作伙伴</a>
+					</div>
+					<br>
+					<a href="#" target="_blank" style="display: inline-block;height: 20px;line-height: 20px;text-decoration: none;"><img src="{% static 'images/gawj.png' %}"> 川公网安备 51010602000457号</a> | 增值电信业务经营许可证：川B2-20100040 |
+					<a href="#" target="_blank">出版物经营许可证</a> | 蜀ICP备11014037号
+					<br><br>
+					Copyright(C)
+					<a href="#" target="_blank">文轩网</a> 2000-2017 版权所有 | 客服热线：400-702-0808 　
+					<br>
+					<img src="{% static 'images/scgswjlogo.png' %}">
+				</div>
+			</div>
+		</div>
+
+
+
+
+    </body>
+</html>
