@@ -11,28 +11,28 @@
 		<script src="{% static 'js/move.js' %}"></script>
 		<script src="{% static 'js/style.js' %}"></script>
 		<script src="{% static 'js/jquery.cookie.js' %}"></script>
-		<script src="{% static 'js/cookie.js' %}"></script>
+{#		<script src="{% static 'js/cookie.js' %}"></script>#}
 		<script src="{% static 'js/wenxuanjuji.js' %}"></script>
 {#        <script src="{% static 'js/test.js' %}"></script>#}
-		<script>
-			onload = function(){
-				
-				var ocol = document.getElementById("col")
-				
-				var user = getCookie("user");
-				
-				if(ocol.innerHTML = user){
-					console.log(user);
-					ocol.innerHTML = user
-					
-				}
-				else{
-					ocol.innerHTML = "【登录】"
-				}
-				 
-				 
-			}
-		</script>
+{#		<script>#}
+{#			onload = function(){#}
+{#				#}
+{#				var ocol = document.getElementById("col")#}
+{#				#}
+{#				var user = getCookie("user");#}
+{#				#}
+{#				if(ocol.innerHTML = user){#}
+{#					console.log(user);#}
+{#					ocol.innerHTML = user#}
+{#					#}
+{#				}#}
+{#				else{#}
+{#					ocol.innerHTML = "【登录】"#}
+{#				}#}
+{#				 #}
+{#				 #}
+{#			}#}
+{#		</script>#}
 	</head>
 	<body>
     `
@@ -47,8 +47,14 @@
 						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="/denglu/" target="_blank" id="col">【登录】</a>
+                        {% if username %}
+                            <a href="#">用户:{{ username }}</a></p>
+                        {% else %}
+                             <a href="/denglu/" target="_blank" id="col">【登录】</a>
+                        {% endif %}
+
 						<a href="/zhuce/" target="_blank" id="kiu">【免费注册】</a>
+                        <a href="/logout/" >退出</a>
 					</li>
 					<li class="list1">
 						<a href="#" target="_blank">我的订单</a>
