@@ -13,6 +13,7 @@
 		<script src="{% static 'js/jquery.cookie.js' %}"></script>
 {#		<script src="{% static 'js/cookie.js' %}"></script>#}
 		<script src="{% static 'js/wenxuanjuji.js' %}"></script>
+        <script src="{% static 'js/swiper.js' %}"></script>
 {#        <script src="{% static 'js/test.js' %}"></script>#}
 {#		<script>#}
 {#			onload = function(){#}
@@ -33,6 +34,7 @@
 {#				 #}
 {#			}#}
 {#		</script>#}
+        st
 	</head>
 	<body>
     `
@@ -48,7 +50,7 @@
 					</li>
 					<li class="login">
                         {% if username %}
-                            <a href="#">用户:{{ username }}</a></p>
+                            <a href="#" target="_blank">用户:{{ username }}</a>
                         {% else %}
                              <a href="/denglu/" target="_blank" id="col">【登录】</a>
                         {% endif %}
@@ -198,28 +200,19 @@
 
 		<!--banner -->
 		<div id="banner-wrapper">
-		<div id="box">
+		    <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="{% static 'images/banner1.jpg'%}"></div>
+                    <div class="swiper-slide"><img src="{% static 'images/banner2.jpg'%}"></div>
+                    <div class="swiper-slide"><img src="{% static 'images/banner3.jpg'%}"></div>
+                    <div class="swiper-slide"><img src="{% static 'images/banner4.jpg'%}"></div>
+                    <div class="swiper-slide"><img src="{% static 'images/banner5.jpg'%}"></div>
+        </div>
+        <div class="swiper-pagination"></div>
 
-			<ul id="list1">
-				<!--<li></li>
-				<li> </li>
-				<li></li>
-				<li> </li>
-				<li></li>-->
+    </div>
 
-			</ul>
-			<ul id="list2">
-				<!--<li class="active"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>-->
-
-			</ul>
-
-
-		</div>
-	</div>
+	    </div>
 		<!--themes -->
 		<div id="themes-wrapper">
 			<div class="themes inner">

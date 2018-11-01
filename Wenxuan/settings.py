@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Wenxuan.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'WenXuan_SQL',
+        'NAME': 'wenxuan',
         'USER': 'root',
         'PASSWORD': 'phz123',
         'HOST': '127.0.0.1',

@@ -7,10 +7,18 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from App.models import User
+from App.models import User, Lunbotu
 
 
 def index(request):
+    lunbotu = Lunbotu.objects.all()
+
+    data = {
+        'lunbotu': lunbotu
+    }
+
+
+
     token = request.COOKIES.get('token')
 
     #获取token
@@ -19,9 +27,12 @@ def index(request):
         user = users.first()
         return render(request, 'index.html',context={'username' : user.username})
     else:
-        return render(request, 'index.html')
+        return render(request, 'index.html',context=data)
 
     # return render(request, 'index.html')
+
+
+
 
 # 生成token
 def generate_token():

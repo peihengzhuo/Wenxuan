@@ -102,8 +102,8 @@
 		</style>
 {#		<script src="{% static 'js/cookie.js' %}"></script>#}
 {#        <script src="{% static 'js/test.js' %}"></script>#}
-{#		<script>#}
-{#			onload = function() {#}
+		<script>
+			onload = function() {
 {##}
 {##}
 {##}
@@ -122,145 +122,145 @@
 {#				var flag4 = false;#}
 {#				var flag5 = false;#}
 {#				var flag6 = false;#}
-{#				//用户名#}
-{#				aIput[0].onkeyup = function(){#}
-{#					if(/^[a-zA-Z_]\w{7,}$/.test(this.value)){#}
-{#						atost.innerHTML = "用户名合法"#}
-{#						flag1 = true;#}
-{#					}#}
-{#					else{#}
-{#						atost.innerHTML = "用户名不合法"#}
-{#						flag1 = false;#}
-{#					}#}
-{##}
-{#				}#}
-{##}
-{#				//密码#}
-{#				var olever = document.getElementById("level")#}
-{#				//var aSpan = olever.getElementsByTagName("span")#}
-{##}
-{#				aIput[1].onkeyup = function(){#}
-{##}
-{#					var value = this.value;#}
-{##}
-{#					if(/^.{6,20}$/.test(value)){#}
-{#						atost.innerHTML = "密码合法"#}
-{#						flag2 = true;#}
-{##}
-{#					}#}
-{#					else{#}
-{#							atost.innerHTML = "密码不合法"#}
-{#							flag2 = false;#}
-{##}
-{#					}#}
-{#				}#}
-{##}
-{#				//重复密码#}
-{#				aIput[2].onkeyup = function(){#}
-{##}
-{#					var value = this.value;#}
-{##}
-{#					if(value == aIput[1].value){#}
-{#						atost.innerHTML = "密码输入一致"#}
-{#						flag3 = true;#}
-{##}
-{#					}#}
-{#					else{#}
-{#						atost.innerHTML = "密码输入不一致，请重新输入"#}
-{#						flag3 = false;#}
-{#					}#}
-{#				}#}
-{##}
-{##}
-{#				//身份证#}
-{##}
-{##}
-{##}
-{#				//手机#}
-{##}
-{#				aIput[3].onkeyup = function(){#}
-{##}
-{#					var value = this.value;#}
-{##}
-{#					if(/^((13[0-9])|(14[5|7])(15([0-3]|[5-9]))|(18[05-9]))\d{8}$/.test(value)){#}
-{#						atost.innerHTML = "手机号输入合法"#}
-{#						flag4 = true;#}
-{#					}#}
-{#					else{#}
-{#						atost.innerHTML = "手机号输入不合法"#}
-{#						flag4 = false;#}
-{##}
-{#					}#}
-{#				}#}
-{##}
-{#				//验证码输入框#}
-{#				aIput[4].onkeyup = function(){#}
-{##}
-{#					fn();#}
-{#				}#}
-{#				//验证码#}
-{#				aIput[5].onclick = function(){#}
-{#					var str = ""#}
-{#					for(var i =0;i<4;i++){#}
-{#					var b = Math.random();#}
-{#					if(b>0 && b<=0.3){#}
-{#						str += parseInt( Math.random()*10 )#}
-{#					}#}
-{#					else if(b<=0.6){#}
-{#						str += String.fromCharCode(parseInt( Math.random()*26)+65)#}
-{#					}#}
-{#					else{#}
-{#						str += String.fromCharCode(parseInt(Math.random()*26 )+97 )#}
-{#					}#}
-{#				}#}
-{#					this.value = str#}
-{##}
-{#					fn();#}
-{#				}#}
-{#				 //验证码是否一致#}
-{#				function fn(){#}
-{##}
-{#					if(aIput[4].value == aIput[5].value){#}
-{##}
-{#						atost.innerHTML = "验证码输入正确"#}
-{#						flag5 = true;#}
-{#					}#}
-{#					else{#}
-{#						atost.innerHTML = "验证码输入有误"#}
-{#						flag5 = false;#}
-{#					}#}
-{#				}#}
-{##}
-{##}
-{#				//注册#}
-{##}
-{#				aIput[7].onclick = function(){#}
-{##}
-{#					if( flag1 && flag2 && flag3 && flag4 && flag5  ){#}
-{##}
-{#						if( aIput[6].checked ){#}
-{##}
-{#							var d = new Date()#}
-{#							d.setDate(d.getDate()+10 );#}
-{#							setCookie( "user",aIput[0].value ,d)#}
-{#							setCookie( "pwd",aIput[1].value ,d)#}
-{##}
-{#						}#}
-{#						alert("注册成功")#}
-{#						location.href = "/denglu/"#}
-{#					}#}
-{#					else{#}
-{#						atost.innerHTML = "输入有误请检查"#}
-{##}
-{#					}#}
-{##}
-{##}
-{#				}#}
-{##}
-{##}
-{##}
-{#			}#}
-{#		</script>#}
+				//用户名
+				aIput[0].onkeyup = function(){
+					if(/^[a-zA-Z_]\w{7,}$/.test(this.value)){
+						atost.innerHTML = "用户名合法"
+						flag1 = true;
+					}
+					else{
+						atost.innerHTML = "用户名不合法"
+						flag1 = false;
+					}
+
+				}
+
+				//密码
+				var olever = document.getElementById("level")
+				//var aSpan = olever.getElementsByTagName("span")
+
+				aIput[1].onkeyup = function(){
+
+					var value = this.value;
+
+					if(/^.{6,20}$/.test(value)){
+						atost.innerHTML = "密码合法"
+						flag2 = true;
+
+					}
+					else{
+							atost.innerHTML = "密码不合法"
+							flag2 = false;
+
+					}
+				}
+
+				//重复密码
+				aIput[2].onkeyup = function(){
+
+					var value = this.value;
+
+					if(value == aIput[1].value){
+						atost.innerHTML = "密码输入一致"
+						flag3 = true;
+
+					}
+					else{
+						atost.innerHTML = "密码输入不一致，请重新输入"
+						flag3 = false;
+					}
+				}
+
+
+				//身份证
+
+
+
+				//手机
+
+				aIput[3].onkeyup = function(){
+
+					var value = this.value;
+
+					if(/^((13[0-9])|(14[5|7])(15([0-3]|[5-9]))|(18[05-9]))\d{8}$/.test(value)){
+						atost.innerHTML = "手机号输入合法"
+						flag4 = true;
+					}
+					else{
+						atost.innerHTML = "手机号输入不合法"
+						flag4 = false;
+
+					}
+				}
+
+				//验证码输入框
+				aIput[4].onkeyup = function(){
+
+					fn();
+				}
+				//验证码
+				aIput[5].onclick = function(){
+					var str = ""
+					for(var i =0;i<4;i++){
+					var b = Math.random();
+					if(b>0 && b<=0.3){
+						str += parseInt( Math.random()*10 )
+					}
+					else if(b<=0.6){
+						str += String.fromCharCode(parseInt( Math.random()*26)+65)
+					}
+					else{
+						str += String.fromCharCode(parseInt(Math.random()*26 )+97 )
+					}
+				}
+					this.value = str
+
+					fn();
+				}
+				 //验证码是否一致
+				function fn(){
+
+					if(aIput[4].value == aIput[5].value){
+
+						atost.innerHTML = "验证码输入正确"
+						flag5 = true;
+					}
+					else{
+						atost.innerHTML = "验证码输入有误"
+						flag5 = false;
+					}
+				}
+
+
+				//注册
+
+				aIput[7].onclick = function(){
+
+					if( flag1 && flag2 && flag3 && flag4 && flag5  ){
+
+						if( aIput[6].checked ){
+
+							var d = new Date()
+							d.setDate(d.getDate()+10 );
+							setCookie( "user",aIput[0].value ,d)
+							setCookie( "pwd",aIput[1].value ,d)
+
+						}
+						alert("注册成功")
+						location.href = "/denglu/"
+					}
+					else{
+						atost.innerHTML = "输入有误请检查"
+
+					}
+
+
+				}
+
+
+
+			}
+		</script>
 	</head>
 	<body>
 		<div id="header-wrapper">
@@ -281,10 +281,10 @@
 					<td><input type="password" placeholder="请输入密码" name="password"></td>
 				</tr>
 
-{#				<tr>#}
-{#					<td class="col1">重复登录密码</td>#}
-{#					<td><input type="password" placeholder="重复登录密码"></td>#}
-{#				</tr>#}
+				<tr>
+					<td class="col1">重复登录密码</td>
+					<td><input type="password" placeholder="重复登录密码"></td>
+				</tr>
 
 
 
@@ -293,13 +293,13 @@
 					<td class="col1">手机</td>
 					<td><input type="text" placeholder="输入手机号" name="tel"></td>
 				</tr>
-{#				<tr>#}
-{#					<td class="col1">验证码</td>#}
-{#					<td>#}
-{#						<input class="codes" type="text" placeholder="输入验证码">#}
-{#						<input type="button" style="width: 80px; background: white; font-size: 20px; margin-left: 10px; color: black;" value="edA5" />#}
-{#					</td>#}
-{#				</tr>#}
+				<tr>
+					<td class="col1">验证码</td>
+					<td>
+						<input class="codes" type="text" placeholder="输入验证码">
+						<input type="button" style="width: 80px; background: white; font-size: 20px; margin-left: 10px; color: black;" value="edA5" />
+					</td>
+				</tr>
 				<tr>
 					<td colspan="2" class="regtd">
 						<input id="checkbox" type="checkbox" />10天内免登录 <br /><br />
