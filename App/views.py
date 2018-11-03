@@ -7,14 +7,15 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from App.models import User, Lunbotu
+from App.models import User, Lunbotu, Wenxuanjuji
 
 
 def index(request):
     lunbotu = Lunbotu.objects.all()
-
+    wenxuanjuji = Wenxuanjuji.objects.all()
     data = {
-        'lunbotu': lunbotu
+        'lunbotu': lunbotu,
+        'wenxuanjuji': wenxuanjuji,
     }
 
 

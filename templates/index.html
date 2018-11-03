@@ -174,6 +174,7 @@
 
 <!--banner -->
 <div id="banner-wrapper">
+{#轮播图#}
     <div id="box">
         <ul id="list1">
             {% for tu in lunbotu %}
@@ -675,6 +676,30 @@
                     <a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>
                 </div>
             </li>
+
+
+
+
+{#            插入数据#}
+
+            {% for wxjj in wenxuanjuji %}
+                <li>
+                    <a href="/small/" target="_blank">
+                        <img src="{{ wxjj.img }}" alt="" title="{{ wxjj.h3 }}">
+                        <span>{{ wxjj.h1 }}</span>
+                        <b>{{ wxjj.b }}</b>
+                        <i>{{ wxjj.i }}</i>
+                    </a>
+                    <div class="description">
+                        <a href="#">{{ wxjj.h3 }}</a>
+                    </div>
+                </li>
+
+            {% endfor %}
+
+
+
+
         </ul>
 
     </div>
