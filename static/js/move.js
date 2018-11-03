@@ -10,12 +10,12 @@ function getStyleAttr(obj, attr){
 		
 
 //封装缓冲运动
-/*
+
 function move(obj, attr, iTarget, fn){
-	
+
 	clearInterval(obj.timer);
 	obj.timer = setInterval(function(){
-		
+
 		//1,current
 		var current = 0;
 		if (attr == "opacity") { //透明度
@@ -25,21 +25,21 @@ function move(obj, attr, iTarget, fn){
 			current = parseFloat(getStyleAttr(obj, attr));
 			current = Math.round(current);
 		}
-		
+
 		//2,speed
 		var speed = (iTarget-current)/8;
 		speed = speed>0 ? Math.ceil(speed) : Math.floor(speed);
-		
+
 		//3,临界值
 		if (current == iTarget) {
 			clearInterval(obj.timer); //停止运动
-			
+
 			//回调
 			if (fn)	fn();
-			
+
 			return;
 		}
-		
+
 		//4,运动
 		if (attr == "opacity") { //透明度
 			obj.style[attr] = (current + speed)/100;
@@ -48,11 +48,11 @@ function move(obj, attr, iTarget, fn){
 		else  { //left,top,width,height
 			obj.style[attr] = current + speed + "px";
 		}
-		
+
 	}, 30);
-	
+
 }
-*/
+
 
 
 
