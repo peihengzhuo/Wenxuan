@@ -1,6 +1,6 @@
 $(function(){
 	var arr=[];
-	$.get("http://127.0.0.1:8020/xiangmu/json/wenxuanjuji.json", function(data){
+	$.get("http://127.0.0.1:8000/xiangmu/json/wenxuanjuji.json", function(data){
 		arr = data;
 		
 		for(var i =0;i<arr.length;i++){
