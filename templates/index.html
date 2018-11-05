@@ -30,7 +30,11 @@
                 {% endif %}
 
                 <a href="/zhuce/" target="_blank" id="kiu">【免费注册】</a>
-                <a href="/logout/">退出</a>
+                {% if username %}
+                   <a href="/logout/">退出</a>
+                {% endif %}
+
+
             </li>
             <li class="list1">
                 <a href="#" target="_blank">我的订单</a>
@@ -665,7 +669,7 @@
                 </div>
             </li>
             <li>
-                <a href="/small/l?id=" +id="" target="_blank">
+                <a href="/small/?id=" +id="" target="_blank">
                     <img src="{% static 'images/ss10.jpg' %}"
                          title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
                     <span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
@@ -684,7 +688,7 @@
 
             {% for wxjj in wenxuanjuji %}
                 <li>
-                    <a href="/small/" target="_blank">
+                    <a href="/small/?id=" +id="" target="_blank">
                         <img src="{{ wxjj.img }}" alt="" title="{{ wxjj.h3 }}">
                         <span>{{ wxjj.h1 }}</span>
                         <b>{{ wxjj.b }}</b>
