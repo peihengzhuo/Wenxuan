@@ -178,6 +178,8 @@
 
 <!--banner -->
 <div id="banner-wrapper">
+
+
 {#轮播图#}
     <div id="box">
         <ul id="list1">
@@ -688,7 +690,7 @@
 
             {% for wxjj in wenxuanjuji %}
                 <li>
-                    <a href="/small/?id=" +id="" target="_blank">
+                    <a href="{% url 'app:small' wxjj.id %}">
                         <img src="{{ wxjj.img }}" alt="" title="{{ wxjj.h3 }}">
                         <span>{{ wxjj.h1 }}</span>
                         <b>{{ wxjj.b }}</b>

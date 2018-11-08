@@ -154,7 +154,7 @@
 			<div class="nav inner">
 				<div class="title">全部商品分类</div>
 				<ul>
-					<li><a href="#" target="_blank">首页</a></li>
+					<li><a href="/#" target="_blank">首页</a></li>
 					<li><a href="#" target="_blank">文学频道</a></li>
 					<li><a href="#" target="_blank">社区频道</a></li>
 					<li><a href="#" target="_blank">经管频道</a></li>
@@ -249,7 +249,7 @@
 				<div class="bk-by">
 					<div class="small-img">
 						<div id="smallImg">
-							<img src="{% static 'images/small.jpg' %}">
+							<img src="{{ user.smallImg }}">
 							<div id="smallArea" style="width: 233.333px; height: 233.333px; display: none; left: 89px; top: 0px;"></div>
 						</div>
 
@@ -278,20 +278,20 @@
 
 					<div class="rig-tilk">
 						<div id="bigArea" style="display: none;">
-							<img src="{% static 'images/big.jpg' %}" id="bigImg" style="left: -152.571px; top: 0px;">
+							<img src="{{ user.bigImg }}" id="bigImg" style="left: -152.571px; top: 0px;">
 						</div>
 						<div class="rit_title">
-							<h1>谁的青春不迷茫</h1>
-							<h3>中国当代都市青春文学，成长励志自我实现，人际交往书，正能量心理学书，新华书店正版畅销图书</h3>
+							<h1>{{ user.h1 }}</h1>
+							<h3>{{ user.h3 }}</h3>
 						</div>
 						<div class="fenlei">
 							<div class="pie-o">
 								<span>定　　价 ：</span>
-								<b class="pju">¥35.00</b>
+								<b class="pju">{{ user.i }}</b>
 							</div>
 							<div class="wxjia">
 								<span>文 轩 价 ：</span>
-								<em class="price">¥22.80</em>
+								<em class="price">{{ user.b }}</em>
 								<i>（6.5折）</i>
 								<a href="#" target="_blank">（降价通知）</a>
 							</div>
@@ -306,7 +306,7 @@
 							</div>
 							<div class="aticle">
 								<span>作　　者 ：</span>
-								<a href="#" target="_blank">刘同</a>&nbsp;著
+								<a href="#" target="_blank">{{ user.span }}</a>&nbsp;著
 							</div>
 							<div class="fenk">
 								<span>所属分类 ：</span>

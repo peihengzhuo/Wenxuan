@@ -26,9 +26,9 @@ def index(request):
     users = User.objects.filter(token=token)
     if users.exists():
         user = users.first()
-        return render(request, 'index.html',context={'username' : user.username})
-    else:
-        return render(request, 'index.html',context=data)
+        return render(request, 'index.html',context={'username': user.username,'lunbotu':lunbotu, 'wenxuanjuji':wenxuanjuji})
+
+    return render(request, 'index.html',context=data)
 
     # return render(request, 'index.html')
 
@@ -113,8 +113,9 @@ def gouwuche(request):
     return render(request, 'gouwuche.html')
 
 
-def small(request):
-    return render(request, 'small.html')
+def small(request,id):
+    user = Wenxuanjuji.objects.filter(id=id).all().first()
+    return render(request, 'small.html',context={'user':user})
 
 
 def small1(request):
